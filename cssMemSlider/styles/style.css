@@ -427,15 +427,4 @@ img {
   margin: 0 auto;
   overflow: hidden;
 }
-
-.slider__line {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.slider__image {
-  width: 1024px;
-  height: 512px;
-}
 /*# sourceMappingURL=style.css.map */
