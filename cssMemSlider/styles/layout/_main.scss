@@ -1,6 +1,135 @@
-
+@import './../abstract/variables';
 .slider{
-    max-width: 85%;
+    text-align: $positionCenter;
+    max-width: 960px;
     margin: 0 auto;
-   overflow: hidden;
+    &__input{
+    display: none;
+}
+}
+.slides{
+
+&__image-content{
+    width: 20%;
+    float: left;
+}
+
+&__image{
+    width: 500%;
+    line-height: 0;
+    transition: all .4s ease;
+}
+
+&__overflow{
+    width: 100%;
+    overflow: hidden;
+}
+
+.input-1:checked ~ & &__image{
+    margin-left: 0;
+}
+.input-2:checked ~  & &__image{
+    margin-left: -100%;
+
+}
+.input-3:checked ~  & &__image{
+    margin-left: -200%;
+
+}
+.input-4:checked ~  & &__image{
+    margin-left: -300%;
+}
+}
+
+
+.descriptions{
+    display: flex;
+    justify-content: space-between;
+    align-items: $positionCenter;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 15px;
+   @media(max-width:576px){
+       flex-direction: column-reverse;
+   }
+    
+    &__overflow{
+        width: 60%;
+        overflow: hidden;
+        @media(max-width:576px){
+            width: 100%;
+        }
+    }
+
+    &__container{
+        transition: all .35s ease;
+        width: 500%;
+    }
+
+    .input-1:checked ~ & &__container{
+        margin-left: 0;
+    }
+
+    .input-2:checked ~ & &__container{
+        margin-left: -100%;
+    }
+    .input-3:checked ~ & &__container{
+        margin-left: -200%;
+    }
+    .input-4:checked ~ & &__container{
+        margin-left: -300%;
+    }
+
+    &__info{
+        width: 20%;
+        float: left;
+    }
+    &__text{
+        width: 100%;
+        color: white;
+        text-align: left;
+    }
+    
+}
+
+.active{
+    text-align: right;
+    display: flex;
+    &__label{
+        border-radius: 10px;
+        display: inline-block;
+        width: 50%;
+        height: 50%;
+        border: 2px solid aqua;
+        background:aqua;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+    }
+    &__wrapper{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        @media(max-width:576px){
+            margin-bottom: 20px;
+        }
+    }
+    &__wrapper:hover &__label{
+        background-color: white;
+        border-color: white ;
+        transition: all .3s ease-in-out;
+    }
+.input-1:checked ~ .descriptions & &__wrapper:nth-child(1) &__label,
+.input-2:checked ~ .descriptions & &__wrapper:nth-child(2) &__label,
+.input-3:checked ~ .descriptions & &__wrapper:nth-child(3) &__label,
+.input-4:checked ~ .descriptions & &__wrapper:nth-child(4) &__label{
+background-color: transparent;
+border-color: aqua ;
+}
+}
+
+.icon{
+    width: 100%;
 }
