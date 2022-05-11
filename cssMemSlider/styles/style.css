@@ -360,6 +360,7 @@ body {
   margin: 0;
 }
 
+h1,
 p {
   padding: 0;
   margin: 0;
@@ -371,12 +372,34 @@ img {
   border-style: none;
 }
 
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #442d5a;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 30px;
+    line-height: 1.5em;
+  }
+}
+
+@media (max-width: 576px) and (max-width: 440px) {
+  .title {
+    font-size: 25px;
+  }
+}
+
 .container {
   max-width: 1280px;
   padding: 40px;
   width: 100%;
   margin: 0 auto;
-  background-color: grey;
+  background: linear-gradient(-140deg, pink, blue);
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -420,6 +443,7 @@ img {
 }
 
 .slides__overflow {
+  border-radius: 8%;
   width: 100%;
   overflow: hidden;
 }
@@ -476,8 +500,8 @@ img {
 }
 
 .descriptions__container {
-  -webkit-transition: all .35s ease;
-  transition: all .35s ease;
+  -webkit-transition: all .35s;
+  transition: all .35s;
   width: 500%;
 }
 

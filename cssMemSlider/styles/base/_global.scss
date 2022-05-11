@@ -1,8 +1,10 @@
 @import './../abstract/variables';
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 *,
 *::before,
 *::after {
@@ -10,12 +12,13 @@ html {
 }
 
 body {
-    font-family:  sans-serif;
+    font-family: sans-serif;
     font-weight: 400;
     margin: 0;
 
 }
 
+h1,
 p {
     padding: 0;
     margin: 0;
@@ -27,20 +30,38 @@ img {
     width: 100%;
     border-style: none;
 }
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(68, 45, 90);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5em;
+    @media(max-width:576px){
+        font-size: 30px;
+        line-height: 1.5em;
+        @media(max-width:440px){
+            font-size: 25px;
+        }
+    }
+}
 
 .container {
     max-width: $containerMaxWidth;
-    padding:40px;
+    padding: 40px;
     width: 100%;
     margin: 0 auto;
-    background-color: grey;
-    @media (min-width: 768px) and (max-width: 1024px){
+    background: linear-gradient(-140deg,pink,blue);
+
+    @media (min-width: 768px) and (max-width: 1024px) {
         padding: 30px;
     }
-    @media (min-width: 576px) and (max-width: 767px){
+
+    @media (min-width: 576px) and (max-width: 767px) {
         padding: 30px 20px;
     }
-    @media (min-width: 320px) and (max-width: 575px){
+
+    @media (min-width: 320px) and (max-width: 575px) {
         padding: 30px 10px;
     }
 }
