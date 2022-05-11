@@ -438,8 +438,8 @@ img {
 .slides__image {
   width: 500%;
   line-height: 0;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+  -webkit-transition: all 0.4s cubic-bezier(0.35, 0.68, 0.42, 0.73);
+  transition: all 0.4s cubic-bezier(0.35, 0.68, 0.42, 0.73);
 }
 
 .slides__overflow {
@@ -500,8 +500,8 @@ img {
 }
 
 .descriptions__container {
-  -webkit-transition: all .35s;
-  transition: all .35s;
+  -webkit-transition: all 0.35s cubic-bezier(0.35, 0.68, 0.42, 0.73);
+  transition: all 0.35s cubic-bezier(0.35, 0.68, 0.42, 0.73);
   width: 500%;
 }
 
@@ -528,8 +528,39 @@ img {
 
 .descriptions__text {
   width: 100%;
-  color: white;
   text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  -webkit-animation-name: color-change;
+          animation-name: color-change;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    color: #ce8490;
+  }
+  50% {
+    color: aqua;
+  }
+  100% {
+    color: #ce8490;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    color: #ce8490;
+  }
+  50% {
+    color: aqua;
+  }
+  100% {
+    color: #ce8490;
+  }
 }
 
 .active {

@@ -20,7 +20,7 @@
     &__image {
         width: 500%;
         line-height: 0;
-        transition: all .4s ease;
+        transition: all .4s cubic-bezier(.35,.68,.42,.73);
     }
 
     &__overflow {
@@ -68,7 +68,7 @@
     }
 
     &__container {
-        transition: all .35s ;
+        transition: all .35s cubic-bezier(.35,.68,.42,.73);
         width: 500%;
     }
 
@@ -95,12 +95,29 @@
 
     &__text {
         width: 100%;
-        color: white;
         text-align: left;
+        font-size: 20px;
+        font-weight: 500;
+        animation-name: color-change;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
     }
-
 }
 
+@keyframes color-change {
+    0% {
+      color: rgb(206, 132, 144);
+    }
+  
+    50% {
+      color: aqua;
+    }
+  
+    100% {
+      color: rgb(206, 132, 144);
+    }
+  }
+  
 .active {
     text-align: right;
     display: flex;
