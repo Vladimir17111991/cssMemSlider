@@ -431,15 +431,18 @@ img {
 }
 
 .slides__image-content {
-  width: 20%;
-  float: left;
+  width: 100%;
 }
 
 .slides__image {
-  width: 500%;
+  width: 400%;
   line-height: 0;
   -webkit-transition: all 0.4s cubic-bezier(0.35, 0.68, 0.42, 0.73);
   transition: all 0.4s cubic-bezier(0.35, 0.68, 0.42, 0.73);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
 }
 
 .slides__overflow {
@@ -502,7 +505,11 @@ img {
 .descriptions__container {
   -webkit-transition: all 0.35s cubic-bezier(0.35, 0.68, 0.42, 0.73);
   transition: all 0.35s cubic-bezier(0.35, 0.68, 0.42, 0.73);
-  width: 500%;
+  width: 400%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
 }
 
 .input-1:checked ~ .descriptions .descriptions__container {
@@ -522,8 +529,7 @@ img {
 }
 
 .descriptions__info {
-  width: 20%;
-  float: left;
+  width: 100%;
 }
 
 .descriptions__text {
@@ -616,6 +622,14 @@ img {
 .input-4:checked ~ .descriptions .active .active__wrapper:nth-child(4) .active__label {
   background-color: transparent;
   border-color: aqua;
+}
+
+.input-1:checked ~ .descriptions .active .active__wrapper:nth-child(1):hover .active__label,
+.input-2:checked ~ .descriptions .active .active__wrapper:nth-child(2):hover .active__label,
+.input-3:checked ~ .descriptions .active .active__wrapper:nth-child(3):hover .active__label,
+.input-4:checked ~ .descriptions .active .active__wrapper:nth-child(4):hover .active__label {
+  background-color: transparent;
+  border-color: white;
 }
 
 .icon {
