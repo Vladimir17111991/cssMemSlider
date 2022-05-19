@@ -3,9 +3,7 @@ html {
   scroll-behavior: smooth;
 }
 
-*,
-*::before,
-*::after {
+*{
   box-sizing: inherit;
 }
 
@@ -13,7 +11,7 @@ body {
   font-family: sans-serif;
   font-weight: 400;
   margin: 0;
-  min-width: 320px;
+  min-width: 20rem;
 }
 
 h1,
@@ -31,9 +29,9 @@ img {
 
 .title {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   color: rgb(68, 45, 90);
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.5em;
 }
@@ -41,8 +39,8 @@ img {
 
 
 .container {
-  max-width: 1280px;
-  padding: 40px;
+  max-width: 80rem;
+  padding: 2.5rem;
   width: 100%;
   margin: 0 auto;
   background: linear-gradient(-140deg, pink, blue);
@@ -52,7 +50,7 @@ img {
 
 .slider {
   text-align: center;
-  max-width: 960px;
+  max-width: 60rem;
   margin: 0 auto;
 }
 
@@ -100,7 +98,7 @@ img {
   align-items: center;
   width: 100%;
   overflow: hidden;
-  margin-top: 15px;
+  margin-top: 0.9rem;
 }
 
 .descriptions__overflow {
@@ -138,7 +136,7 @@ img {
 .descriptions__text {
   width: 100%;
   text-align: left;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 500;
   animation-name: color-change;
   animation-duration: 2s;
@@ -165,7 +163,7 @@ img {
 }
 
 .active__label {
-  border-radius: 10px;
+  border-radius: .625rem;
   display: inline-block;
   width: 50%;
   height: 50%;
@@ -213,26 +211,26 @@ img {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .container {
-    padding: 30px;
+    padding: 1.8rem;
   }
 
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
   .container {
-    padding: 30px 20px;
+    padding: 1.8rem 1.25rem;
   }
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
   .container {
-    padding: 30px 10px;
+    padding: 1.8rem .75rem;
   }
 }
 
 @media(max-width:576px) {
   .title {
-    font-size: 30px;
+    font-size: 1.8rem;
     line-height: 1.5em;
   }
 
@@ -245,12 +243,12 @@ img {
   }
 
   .active__wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 }
 
 @media(max-width:440px) {
   .title {
-    font-size: 25px;
+    font-size: 1.7rem;
   }
 }
