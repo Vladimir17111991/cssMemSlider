@@ -1,0 +1,254 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*{
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  margin: 0;
+  min-width: 20rem;
+}
+
+h1,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+
+img {
+  max-width: 100%;
+  width: 100%;
+  border-style: none;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  color: rgb(68, 45, 90);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+
+
+.container {
+  max-width: 80rem;
+  padding: 2.5rem;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(-140deg, pink, blue);
+}
+
+
+
+.slider {
+  text-align: center;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.slider__input {
+  display: none;
+}
+
+.slides__image-content {
+  width: 100%;
+}
+
+.slides__image {
+  width: 400%;
+  line-height: 0;
+  transition: all .4s cubic-bezier(.35, .68, .42, .73);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.slides__overflow {
+  border-radius: 8%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.input-1:checked~.slides .slides__image {
+  margin-left: 0;
+}
+
+.input-2:checked~.slides .slides__image {
+  margin-left: -100%;
+}
+
+.input-3:checked~.slides .slides__image {
+  margin-left: -200%;
+}
+
+.input-4:checked~.slides .slides__image {
+  margin-left: -300%;
+}
+
+.descriptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 0.9rem;
+}
+
+.descriptions__overflow {
+  width: 60%;
+  overflow: hidden;
+}
+
+.descriptions__container {
+  transition: all .35s cubic-bezier(.35, .68, .42, .73);
+  width: 400%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.input-1:checked~.descriptions .descriptions__container {
+  margin-left: 0;
+}
+
+.input-2:checked~.descriptions .descriptions__container {
+  margin-left: -100%;
+}
+
+.input-3:checked~.descriptions .descriptions__container {
+  margin-left: -200%;
+}
+
+.input-4:checked~.descriptions .descriptions__container {
+  margin-left: -300%;
+}
+
+.descriptions__info {
+  width: 100%;
+}
+
+.descriptions__text {
+  width: 100%;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 500;
+  animation-name: color-change;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: rgb(206, 132, 144);
+  }
+
+  50% {
+    color: aqua;
+  }
+
+  100% {
+    color: rgb(206, 132, 144);
+  }
+}
+
+.active {
+  text-align: right;
+  display: flex;
+}
+
+.active__label {
+  border-radius: .625rem;
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  border: 2px solid aqua;
+  background: aqua;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.active__wrapper {
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.active__wrapper:hover .active__label {
+  background-color: white;
+  border-color: white;
+  transition: all .3s ease-in-out;
+}
+
+.input-1:checked~.descriptions .active .active__wrapper:nth-child(1) .active__label,
+.input-2:checked~.descriptions .active .active__wrapper:nth-child(2) .active__label,
+.input-3:checked~.descriptions .active .active__wrapper:nth-child(3) .active__label,
+.input-4:checked~.descriptions .active .active__wrapper:nth-child(4) .active__label {
+  background-color: transparent;
+  border-color: aqua;
+}
+
+.input-1:checked~.descriptions .active .active__wrapper:nth-child(1):hover .active__label,
+.input-2:checked~.descriptions .active .active__wrapper:nth-child(2):hover .active__label,
+.input-3:checked~.descriptions .active .active__wrapper:nth-child(3):hover .active__label,
+.input-4:checked~.descriptions .active .active__wrapper:nth-child(4):hover .active__label {
+  background-color: transparent;
+  border-color: white;
+}
+
+.icon {
+  width: 100%;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 1.8rem;
+  }
+
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    padding: 1.8rem 1.25rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+  .container {
+    padding: 1.8rem .75rem;
+  }
+}
+
+@media(max-width:576px) {
+  .title {
+    font-size: 1.8rem;
+    line-height: 1.5em;
+  }
+
+  .descriptions {
+    flex-direction: column-reverse;
+  }
+
+  .descriptions__overflow {
+    width: 100%;
+  }
+
+  .active__wrapper {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media(max-width:440px) {
+  .title {
+    font-size: 1.7rem;
+  }
+}

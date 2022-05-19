@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>cssMemSlider</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Css - Mem - Slider</h1>
+        <div class="slider">
+            <input checked class="slider__input input-1" type="radio" name="slider" id="switch1">
+            <input class="slider__input input-2" type="radio" name="slider" id="switch2">
+            <input class="slider__input input-3" type="radio" name="slider" id="switch3">
+            <input class="slider__input input-4" type="radio" name="slider" id="switch4">
+            <div class="slides">
+                <div class="slides__overflow">
+                    <div class="slides__image">
+                        <div class="slides__image-content">
+                            <img class="icon" src="./assets/slide1.jpg" alt="Slide #1">
+                        </div>
+                        <div class="slides__image-content">
+                            <img class="icon" src="./assets/slide2.jpg" alt="Slide #2">
+                        </div>
+                        <div class="slides__image-content">
+                            <img class="icon" src="./assets/slide3.jpg" alt="Slide #3">
+                        </div>
+                        <div class="slides__image-content">
+                            <img class="icon" src="./assets/slide4.jpg" alt="Slide #4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="descriptions">
+                <div class="descriptions__overflow">
+                    <div class="descriptions__container">
+                        <div class="descriptions__info">
+                            <p class="descriptions__text">
+                                Good morning!
+                            </p>
+                        </div>
+                        <div class="descriptions__info">
+                            <p class="descriptions__text">
+                                Good day!
+                            </p>
+                        </div>
+                        <div class="descriptions__info">
+                            <p class="descriptions__text">
+                                Good evening!
+                            </p>
+                        </div>
+                        <div class="descriptions__info">
+                            <p class="descriptions__text">
+                                Good night!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class = "active">
+                    <label for="switch1" class="active__wrapper"><label class="active__label" for="switch1"></label></label>
+                    <label for="switch2" class="active__wrapper"><label class="active__label" for="switch2"></label></label>
+                    <label for="switch3" class="active__wrapper"><label class="active__label" for="switch3"></label></label>
+                    <label for="switch4" class="active__wrapper"><label class="active__label" for="switch4"></label></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
