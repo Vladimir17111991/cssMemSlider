@@ -177,8 +177,8 @@ img {
 
 .active__wrapper {
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   align-items: center;
   justify-content: center;
   cursor: pointer;
